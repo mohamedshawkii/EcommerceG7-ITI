@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <div class="div1"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <button onclick="SideBareOpen()">cart
+    <span class="cartCountSpan" id="cartCount">0</span>
+  </button>
+
+  <button onclick="GetAllProduct()">all Product</button>
+  <button onclick="GetPrices('ascending')">high Price</button>
+  <button onclick="GetPrices('descending')">low price</button>
+  <button onclick="GetCategory('women')">women</button>
+  <button onclick="GetCategory('men')">men</button>
+  <button onclick="GetCategory('shoes')">shoes</button>
+  <button onclick="GetCategory('watches')">watches</button>
+
+  <div class="div1"></div>
+
+  <div class="sideBareContainer">
+    <div class="sideBare">
+      <button onclick="SideBareClose()">close</button>
+      <div class="listOfItem" id="cartItems"></div>
+      <div class="TotalPrice"></div>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sideBareContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s;
+    z-index: 1000;
+}
+
+.sideBareContainer.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sideBare {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 45%;
+    max-width: 500px; /* Ensure it doesn't become too large */
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+    z-index: 1001;
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.sideBare.open{
+    right: 0;
+}
+
+.cartItem {
+    padding: 4rem 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.listOfItem {
+    overflow-y: scroll;
+}
+
+/* .cartCountSpan {} */
+
+button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: black;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
